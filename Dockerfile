@@ -29,11 +29,12 @@ RUN buildDeps=" \
 	&& ./autogen.sh \
 	&& dpkg-buildpackage \
 	&& cd .. \
-	&& dpkg -i sniproxy_0.3.6_amd64.deb \
+	&& dpkg -i sniproxy_"$SNIPROXY_VERSION"_amd64.deb \
 	&& rm -fr sniproxy* \
 	&& mkdir /etc/sniproxy \
 	&& mv /etc/sniproxy.conf /etc/sniproxy/ \
-	&& apt-get purge -y --auto-remove $buildDeps
+	&& apt-get purge -y --auto-remove $buildDeps \
+	&& apt-get autoremove -y
 
 WORKDIR /etc/sniproxy
 
