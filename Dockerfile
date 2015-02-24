@@ -41,4 +41,4 @@ WORKDIR /etc/sniproxy
 EXPOSE 80
 EXPOSE 443
 
-CMD ["/usr/sbin/sniproxy","-f","-c","/etc/sniproxy/sniproxy.conf"]
+CMD ["/usr/sbin/sniproxy","-c","/etc/sniproxy/sniproxy.conf","-f"]
