@@ -16,7 +16,7 @@ Get the docker image by running the following commands:
 
 ``` bash
 $ docker pull tommylau/sniproxy
-$ docker run --name sniproxy ---net=host -v /path/to/sniproxy:/etc/sniproxy -d tommylau/sniproxy
+$ docker run --name sniproxy --net=host -v /path/to/sniproxy:/etc/sniproxy -d tommylau/sniproxy
 ```
 
 Example config file
